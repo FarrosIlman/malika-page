@@ -44,7 +44,7 @@ export function FloatingNav() {
       />
 
       {/* Floating Buttons Container - Bottom Right */}
-      <div className="fixed bottom-8 right-6 md:bottom-12 md:right-8 flex flex-col items-end gap-4 z-[999]">
+      <div className="fixed bottom-6 right-6 flex flex-col items-end gap-4 z-[999]">
         
         {/* Back to Top Button */}
         <AnimatePresence>
