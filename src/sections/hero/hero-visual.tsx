@@ -20,7 +20,7 @@ export function HeroVisual() {
         initial={{ opacity: 0, scale: 0.9, y: -20, rotate: -2 }}
         animate={{ opacity: 0.6, scale: 0.95, y: -40, rotate: -4 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="absolute top-0 right-4 w-[90%] rounded-2xl border overflow-hidden shadow-2xl z-0 hidden sm:block"
+        className="absolute top-0 right-2 sm:right-4 w-[95%] sm:w-[90%] rounded-2xl border overflow-hidden shadow-2xl z-0"
         style={{ backgroundColor: "#1c1c28", borderColor: "rgba(139,128,248,0.15)" }}
       >
         {/* Figma-like topbar */}

@@ -116,7 +116,7 @@ export function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="absolute top-[72px] left-0 right-0 bg-[#0d0d0f]/80 backdrop-blur-xl border-b border-white/10 shadow-2xl overflow-hidden z-50 md:hidden rounded-none"
+              className="absolute top-[72px] left-0 right-0 bg-[#0d0d0f]/95 backdrop-blur-3xl border-b border-white/10 shadow-2xl overflow-hidden z-50 md:hidden rounded-none"
             >
               <div className="flex flex-col p-4">
                 {navLinks.map((link) => (
@@ -134,7 +134,7 @@ export function Navbar() {
                   <Link
                     href="#contact"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="w-full flex justify-center items-center text-sm font-medium text-primary-foreground bg-primary hover:opacity-90 transition-opacity px-5 py-3.5 rounded-none shadow-[0_0_20px_rgba(59,130,246,0.2)]"
+                    className="w-full flex justify-center items-center text-sm font-medium text-primary-foreground bg-primary hover:opacity-90 transition-opacity px-5 py-3.5 rounded-xl shadow-[0_0_20px_rgba(59,130,246,0.2)]"
                   >
                     Mulai Diskusi
                   </Link>
