@@ -67,12 +67,13 @@ export function HeroText() {
       {/* Social proof */}
       <motion.div
         {...fadeUp(0.5)}
-        className="flex items-center gap-3 text-sm text-muted font-mono"
       >
-        <div className="flex gap-0.5" role="img" aria-label="Build Status Passing">
-          <span className="text-success">✔</span>
+        <div className="flex items-center gap-2 mt-8 text-sm font-medium text-muted">
+          <span className="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400">
+            ✓
+          </span>
+          <span>12+ proyek berhasil diselesaikan</span>
         </div>
-        <span>150+ projects successfully shipped</span>
       </motion.div>
     </div>
   );
