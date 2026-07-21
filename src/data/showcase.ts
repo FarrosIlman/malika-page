@@ -1,0 +1,38 @@
+export const showcase = [
+  {
+    id: "project-1",
+    title: "SAKA App",
+    category: "Mobile Application",
+    description: "Innovative mobile app designed dengan high performance dan modern UI/UX untuk the best user experience.",
+    image: "/saka_app.png",
+    tags: ["React Native", "TypeScript", "Tailwind", "Mobile"],
+    link: "#",
+  },
+  {
+    id: "project-2",
+    title: "HOS-Pass",
+    category: "Web Application",
+    description: "Integrated access management system. Membantu digitalisasi dan streamline operasional end-to-end secara secure dan efisien.",
+    image: "/hos_pass.png",
+    tags: ["Next.js", "TypeScript", "Tailwind", "API"],
+    link: "#",
+  },
+  {
+    id: "project-3",
+    title: "Exampel",
+    category: "Academic / Custom System",
+    description: "Custom information system developed untuk specific needs. Dilengkapi comprehensive documentation dan structured database design.",
+    image: "/exampel_sys.png",
+    tags: ["React", "Express", "PostgreSQL"],
+    link: "#",
+  },
+  {
+    id: "project-4",
+    title: "E-Commerce Experience",
+    category: "Creative Design",
+    description: "High-conversion e-commerce platform. Fokus pada typography, whitespace, dan micro-interactions untuk premium feel.",
+    image: "/e_commerce.png",
+    tags: ["UI/UX", "Next.js", "Tailwind"],
+    link: "#",
+  },
+];
