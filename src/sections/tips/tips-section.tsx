@@ -7,7 +7,7 @@ import { Lightbulb, CheckCircle2 } from "lucide-react";
 
 export function TipsSection() {
   return (
-    <section id="tips" className="py-24" style={{ borderTop: "1px solid rgba(139,128,248,0.07)" }}>
+    <section id="tips" className="py-24 relative overflow-hidden">
       <Container>
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Left Column: Heading */}

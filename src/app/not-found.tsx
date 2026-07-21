@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { m as motion } from "framer-motion";
 import { ArrowLeft, SearchX } from "lucide-react";
-import { MotionProvider } from "@/components/shared/motion-provider";
+import { MotionProvider } from "@/providers/motion-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 

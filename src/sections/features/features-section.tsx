@@ -24,8 +24,8 @@ function FeatureRow({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.5, delay: index * 0.07, ease: EASE }}
-      className="group flex flex-col sm:flex-row items-start gap-6 py-8 border-b last:border-0 rounded-xl px-4
-                 transition-all duration-200 ease-out code-block my-4"
+      className="group flex flex-col sm:flex-row items-start gap-6 py-8 border-b border-white/5 last:border-0 rounded-xl px-4
+                 transition-all duration-200 ease-out hover:bg-white/[0.02]"
     >
       {/* Icon container */}
       <div
@@ -52,8 +52,8 @@ function FeatureRow({
 
 export function FeaturesSection() {
   return (
-    <section id="services" className="py-24">
-      <Container>
+    <section id="services" className="py-24 relative overflow-hidden">
+      <Container className="relative z-10">
         <div className="mb-16 text-center max-w-3xl mx-auto space-y-6">
           <span className="badge-terminal">
             <span aria-hidden="true">&gt;_</span>

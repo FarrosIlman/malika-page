@@ -14,7 +14,7 @@ export function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-24" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+    <section id="faq" className="py-24 relative overflow-hidden">
       <Container>
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Left Column: Heading */}

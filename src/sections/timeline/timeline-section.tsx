@@ -15,8 +15,7 @@ export function TimelineSection() {
   return (
     <section
       id="process"
-      className="py-24"
-      style={{ borderTop: "1px solid rgba(139,128,248,0.07)" }}
+      className="py-24 relative overflow-hidden"
     >
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24">

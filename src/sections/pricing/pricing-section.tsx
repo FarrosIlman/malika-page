@@ -7,7 +7,7 @@ import { CheckCircle2, ShieldCheck, Clock, Award } from "lucide-react";
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="py-24 relative overflow-hidden" style={{ borderTop: "1px solid rgba(139,128,248,0.07)" }}>
+    <section id="pricing" className="py-24 relative overflow-hidden">
       {/* Background glow */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] pointer-events-none rounded-full"

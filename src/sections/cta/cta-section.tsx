@@ -117,7 +117,7 @@ export function CTASection() {
   ];
 
   return (
-    <section id="contact" className="py-24" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+    <section id="contact" className="py-24 relative overflow-hidden">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -23,8 +23,7 @@ export async function ShowcaseSection() {
   return (
     <section
       id="portfolio"
-      className="py-24"
-      style={{ borderTop: "1px solid rgba(139,128,248,0.07)" }}
+      className="py-24 relative overflow-hidden"
     >
       <Container>
         {/* Header */}

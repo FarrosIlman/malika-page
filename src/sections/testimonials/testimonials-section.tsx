@@ -105,8 +105,7 @@ function TestimonialCard({
 export function TestimonialsSection() {
   return (
     <section
-      className="py-24"
-      style={{ borderTop: "1px solid rgba(139,128,248,0.07)" }}
+      className="py-24 relative overflow-hidden"
     >
       <Container>
         <div className="space-y-5 mb-14 max-w-xl">

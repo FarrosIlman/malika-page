@@ -8,12 +8,7 @@ import { statistics } from "@/data/statistics";
 export function StatisticsSection() {
   return (
     <section
-      className="py-16"
-      style={{
-        borderTop:    "1px solid rgba(139,128,248,0.07)",
-        borderBottom: "1px solid rgba(139,128,248,0.07)",
-        backgroundColor: "rgba(139,128,248,0.02)",
-      }}
+      className="py-16 relative overflow-hidden"
     >
       <Container>
         {/*
