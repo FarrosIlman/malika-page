@@ -3,6 +3,7 @@
 import { m as motion } from "framer-motion";
 import { Container } from "@/components/shared/container";
 import { testimonials } from "@/data/testimonials";
+import { TextReveal } from "@/components/shared/text-reveal";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -113,9 +114,10 @@ export function TestimonialsSection() {
             <span aria-hidden="true">&gt;_</span>
             Client Feedback
           </span>
-          <h2 className="text-display text-4xl md:text-5xl leading-[1.1] text-foreground">
-            What clients say after working with us
-          </h2>
+          <TextReveal 
+            text="What clients say after working with us" 
+            className="text-display text-4xl md:text-5xl leading-[1.1] text-foreground" 
+          />
         </div>
 
         {/* Grid — 1 col mobile, 2 col md+ */}

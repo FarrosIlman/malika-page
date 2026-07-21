@@ -2,6 +2,7 @@ import { Container } from "@/components/shared/container";
 import { showcase as fallbackShowcase } from "@/data/showcase";
 import { ArrowUpRight } from "lucide-react";
 import { ProjectCard } from "./project-card";
+import { TextReveal } from "@/components/shared/text-reveal";
 import { client } from "@/sanity/lib/client";
 import { portfolioQuery } from "@/sanity/lib/queries";
 
@@ -33,9 +34,10 @@ export async function ShowcaseSection() {
               <span aria-hidden="true">&gt;_</span>
               Featured Portfolio
             </span>
-            <h2 className="text-display text-4xl md:text-5xl leading-[1.1] text-foreground">
-              Software & sistem yang kami kembangkan
-            </h2>
+            <TextReveal 
+              text="Software & sistem yang kami kembangkan" 
+              className="text-display text-4xl md:text-5xl leading-[1.1] text-foreground" 
+            />
           </div>
           <a
             href="#"

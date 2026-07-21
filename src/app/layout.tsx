@@ -22,14 +22,48 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.name,
+    default: siteConfig.title,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  authors: [
+    {
+      name: "Malika Digital Solutions",
+      url: siteConfig.url,
+    },
+  ],
+  creator: "Malika Digital Solutions",
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: siteConfig.url,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: siteConfig.title,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: ["/twitter-image"],
+    creator: "@malikadigital",
+  },
   icons: {
     icon: "/logo.jpg",
+    apple: "/logo.jpg",
   },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -39,7 +73,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
-      <body className="min-h-screen bg-background text-foreground antialiased overflow-x-hidden">
+      <body className="min-h-screen bg-background text-foreground antialiased overflow-x-clip">
         {children}
       </body>
     </html>

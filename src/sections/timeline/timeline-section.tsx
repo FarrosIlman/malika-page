@@ -4,6 +4,7 @@ import { useState } from "react";
 import { m as motion, AnimatePresence } from "framer-motion";
 import { Container } from "@/components/shared/container";
 import { projectTimeline, academicTimeline } from "@/data/timeline";
+import { TextReveal } from "@/components/shared/text-reveal";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -15,7 +16,7 @@ export function TimelineSection() {
   return (
     <section
       id="process"
-      className="py-24 relative overflow-hidden"
+      className="py-24 relative overflow-clip"
     >
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24">
@@ -25,9 +26,10 @@ export function TimelineSection() {
               <span aria-hidden="true">&gt;_</span>
               Development Workflow
             </span>
-            <h2 className="text-display text-4xl md:text-5xl leading-[1.1] text-foreground">
-              Proses kerja yang transparan & terukur
-            </h2>
+            <TextReveal 
+              text="Proses kerja yang transparan & terukur" 
+              className="text-display text-4xl md:text-5xl leading-[1.1] text-foreground" 
+            />
             <p className="text-muted leading-relaxed text-sm">
               Baik dalam mendevelop aplikasi skala enterprise maupun menyediakan layanan bimbingan skripsi IT, kami menerapkan workflow yang agile, terstruktur, dan transparan.
             </p>

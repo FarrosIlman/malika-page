@@ -1,10 +1,19 @@
 "use client";
 
-import { m as motion } from "framer-motion";
+import { useRef } from "react";
+import { m as motion, useScroll, useTransform } from "framer-motion";
 
 export function HeroVisual() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll();
+  
+  // Parallax elements bound to raw scroll position for the hero
+  const y1 = useTransform(scrollY, [0, 800], [0, 120]); // Graphic mockup moves down
+  const y2 = useTransform(scrollY, [0, 800], [0, -80]); // Code editor moves up
+
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{
@@ -20,8 +29,8 @@ export function HeroVisual() {
         initial={{ opacity: 0, scale: 0.9, y: -20, rotate: -2 }}
         animate={{ opacity: 0.6, scale: 0.95, y: -40, rotate: -4 }}
         transition={{ duration: 0.8, delay: 0.5 }}
+        style={{ backgroundColor: "#1c1c28", borderColor: "rgba(139,128,248,0.15)", y: y1 }}
         className="absolute top-0 right-2 sm:right-4 w-[95%] sm:w-[90%] rounded-2xl border overflow-hidden shadow-2xl z-0"
-        style={{ backgroundColor: "#1c1c28", borderColor: "rgba(139,128,248,0.15)" }}
       >
         {/* Figma-like topbar */}
         <div className="flex items-center justify-between px-3 py-2 border-b" style={{ borderColor: "rgba(255,255,255,0.05)", backgroundColor: "#252536" }}>
@@ -49,11 +58,11 @@ export function HeroVisual() {
 
       {/* ── Code Editor Mockup (Front) ── */}
       <motion.div
-        initial={{ opacity: 0, y: 10 }}
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        className="w-full rounded-2xl border overflow-hidden shadow-2xl z-10"
-        style={{ backgroundColor: "#06060c", borderColor: "rgba(139,128,248,0.15)" }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+        style={{ y: y2, backgroundColor: "#06060c", borderColor: "rgba(139,128,248,0.15)" }}
+        className="relative z-10 w-[95%] sm:w-full mt-16 sm:mt-12 rounded-2xl border border-white/5 overflow-hidden shadow-2xl"
       >
         {/* Editor tabs */}
         <div

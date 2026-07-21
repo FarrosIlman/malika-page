@@ -7,7 +7,7 @@ import { Lightbulb, CheckCircle2 } from "lucide-react";
 
 export function TipsSection() {
   return (
-    <section id="tips" className="py-24 relative overflow-hidden">
+    <section id="tips" className="py-24 relative overflow-clip">
       <Container>
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Left Column: Heading */}

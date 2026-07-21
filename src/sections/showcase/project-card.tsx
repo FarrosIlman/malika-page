@@ -1,6 +1,7 @@
 "use client";
 
-import { m as motion } from "framer-motion";
+import { useRef } from "react";
+import { m as motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
@@ -91,8 +92,18 @@ export function ProjectCard({
   link: string;
   index: number;
 }) {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  
+  // Parallax effect: even indexed cards move slightly slower/differently than odd indexed cards
+  const parallaxY = useTransform(scrollYProgress, [0, 1], [0, index % 2 === 0 ? -30 : -60]);
+
   return (
     <motion.article
+      ref={ref}
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
@@ -100,28 +111,30 @@ export function ProjectCard({
       aria-label={`Project: ${title}`}
       className="flex flex-col h-full"
     >
-      <div className="mb-5 overflow-hidden rounded-2xl group transition-transform duration-300 hover:scale-[1.02]">
-        <ProjectImageFrame image={image} title={title} link={link} />
-      </div>
+      <motion.div style={{ y: parallaxY }} className="flex flex-col h-full">
+        <div className="mb-5 overflow-hidden rounded-2xl group transition-transform duration-300 hover:scale-[1.02]">
+          <ProjectImageFrame image={image} title={title} link={link} />
+        </div>
 
-      <div className="flex-1">
-        <p className="text-xs text-primary font-mono mb-2">{category}</p>
-        <h3 className="text-xl font-medium text-foreground group-hover:text-primary transition-colors duration-200">
-          {title}
-        </h3>
-        <p className="text-sm text-muted mt-2 leading-relaxed">{description}</p>
-      </div>
+        <div className="flex-1">
+          <p className="text-xs text-primary font-mono mb-2">{category}</p>
+          <h3 className="text-xl font-medium text-foreground group-hover:text-primary transition-colors duration-200">
+            {title}
+          </h3>
+          <p className="text-sm text-muted mt-2 leading-relaxed">{description}</p>
+        </div>
 
-      <div className="flex flex-wrap gap-2 mt-5" aria-label="Technologies used">
-        {tags && tags.map((tag) => (
-          <span
-            key={tag}
-            className="badge-tech"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
+        <div className="flex flex-wrap gap-2 mt-5" aria-label="Technologies used">
+          {tags && tags.map((tag) => (
+            <span
+              key={tag}
+              className="badge-tech"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </motion.div>
     </motion.article>
   );
 }

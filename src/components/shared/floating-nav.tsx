@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { m as motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import { MessageCircle, ArrowUp } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { Magnetic } from "@/components/shared/magnetic";
 
 export function FloatingNav() {
   const { scrollYProgress } = useScroll();
@@ -63,7 +64,8 @@ export function FloatingNav() {
         </AnimatePresence>
 
         {/* WhatsApp Floating Button */}
-        <motion.a
+        <Magnetic>
+          <motion.a
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5 }}
@@ -102,7 +104,8 @@ export function FloatingNav() {
           >
             Konsultasi via WhatsApp
           </motion.div>
-        </motion.a>
+          </motion.a>
+        </Magnetic>
       </div>
     </>
   );

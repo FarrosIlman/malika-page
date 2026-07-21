@@ -10,9 +10,9 @@ export function Footer() {
   return (
     <footer className="pt-16 pb-6 mt-12" style={{ borderTop: "1px solid rgba(139,128,248,0.1)" }}>
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-10 mb-14">
+        <div className="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr] gap-x-6 gap-y-10 mb-14">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="col-span-2 md:col-span-1 space-y-4">
             <Link href="/" className="inline-flex items-center gap-3">
               <Image 
                 src="/logo.jpg" 

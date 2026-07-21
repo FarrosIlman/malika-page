@@ -3,6 +3,7 @@
 import { m as motion } from "framer-motion";
 import { Container } from "@/components/shared/container";
 import { features } from "@/data/features";
+import { TextReveal } from "@/components/shared/text-reveal";
 import { LucideIcon } from "lucide-react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -59,9 +60,10 @@ export function FeaturesSection() {
             <span aria-hidden="true">&gt;_</span>
             Core Expertise & Services
           </span>
-          <h2 className="text-display text-4xl md:text-5xl leading-[1.1] text-foreground">
-            Solusi digital end-to-end untuk bisnis dan akademik
-          </h2>
+          <TextReveal 
+            text="Solusi digital end-to-end untuk bisnis dan akademik" 
+            className="text-display text-4xl md:text-5xl leading-[1.1] text-foreground justify-center" 
+          />
           <p className="text-muted leading-relaxed text-lg">
             Sebagai digital agency & software house terpercaya, kami mendeliver exceptional digital products dan menyediakan technical consulting terbaik untuk memastikan setiap project Anda sukses.
           </p>
