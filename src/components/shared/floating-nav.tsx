@@ -87,8 +87,7 @@ export function FloatingNav() {
             className="absolute inset-0 rounded-full bg-green-500 -z-10"
           />
           <MessageCircle className="w-6 h-6 relative z-10" />
-          
-          {/* Label text that periodically slides in and out (desktop only) */}
+          {/* Label text that periodically slides in and out (all devices) */}
           <motion.div 
             animate={{ 
               opacity: [0, 1, 1, 0, 0],
@@ -99,7 +98,7 @@ export function FloatingNav() {
               repeat: Infinity, 
               ease: "easeInOut"
             }}
-            className="absolute right-full mr-4 px-4 py-2 bg-surface/90 backdrop-blur-sm border border-white/10 text-sm font-medium rounded-xl pointer-events-none whitespace-nowrap hidden md:block text-foreground shadow-lg"
+            className="absolute right-full mr-4 px-4 py-2 bg-surface/90 backdrop-blur-sm border border-white/10 text-sm font-medium rounded-xl pointer-events-none whitespace-nowrap text-foreground shadow-lg"
           >
             Konsultasi via WhatsApp
           </motion.div>
