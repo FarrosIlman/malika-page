@@ -88,10 +88,21 @@ export function FloatingNav() {
           />
           <MessageCircle className="w-6 h-6 relative z-10" />
           
-          {/* Tooltip that shows on hover (desktop only) */}
-          <div className="absolute right-full mr-4 px-3 py-1.5 bg-surface border border-white/10 text-xs font-medium rounded-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap hidden md:block text-foreground">
+          {/* Label text that periodically slides in and out (desktop only) */}
+          <motion.div 
+            animate={{ 
+              opacity: [0, 1, 1, 0, 0],
+              x: [15, 0, 0, 15, 15]
+            }}
+            transition={{ 
+              duration: 8,
+              repeat: Infinity, 
+              ease: "easeInOut"
+            }}
+            className="absolute right-full mr-4 px-4 py-2 bg-surface/90 backdrop-blur-sm border border-white/10 text-sm font-medium rounded-xl pointer-events-none whitespace-nowrap hidden md:block text-foreground shadow-lg"
+          >
             Konsultasi via WhatsApp
-          </div>
+          </motion.div>
         </motion.a>
       </div>
     </>
