@@ -68,9 +68,6 @@ export default function RootLayout({
     <html lang="id" className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
       <body className="min-h-screen bg-background text-foreground antialiased overflow-x-hidden">
         <MotionProvider>
-          <BackgroundMesh />
-          <GradientBlobs />
-          <FloatingParticles />
           <Navbar />
           <main className="relative z-10">
             {children}
