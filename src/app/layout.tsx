@@ -5,6 +5,8 @@ import { MotionProvider } from "@/providers/motion-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { FloatingNav } from "@/components/shared/floating-nav";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -77,6 +79,8 @@ export default function RootLayout({
           <FloatingNav />
           <Footer />
         </MotionProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
