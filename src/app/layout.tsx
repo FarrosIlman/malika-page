@@ -4,9 +4,7 @@ import { siteConfig } from "@/config/site";
 import { MotionProvider } from "@/providers/motion-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import { BackgroundMesh } from "@/components/shared/background-mesh";
-import { GradientBlobs } from "@/components/shared/gradient-blobs";
-import { FloatingParticles } from "@/components/shared/floating-particles";
+import { FloatingNav } from "@/components/shared/floating-nav";
 import "./globals.css";
 
 const inter = Inter({
@@ -35,17 +33,21 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     "Software House Indonesia",
-    "Digital Agency Indonesia",
     "Jasa Pembuatan Website",
-    "Jasa Pembuatan Aplikasi Web",
-    "SaaS Development Indonesia",
+    "Web Developer Jakarta",
+    "Bimbingan Skripsi IT",
+    "Joki Tugas Informatika",
     "UI/UX Design Agency",
-    "Jasa Skripsi Informatika",
-    "Bantuan Tugas Akhir IT",
     "IT Consultant",
+    "SaaS Development Indonesia",
   ],
-  authors: [{ name: "Malika Digital Solutions", url: siteConfig.url }],
-  creator: "Malika Digital Solutions",
+  authors: [
+    {
+      name: "Malika Digital",
+      url: siteConfig.url,
+    },
+  ],
+  creator: "Malika Digital",
   openGraph: {
     type: "website",
     locale: "id_ID",
@@ -72,6 +74,7 @@ export default function RootLayout({
           <main className="relative z-10">
             {children}
           </main>
+          <FloatingNav />
           <Footer />
         </MotionProvider>
       </body>
