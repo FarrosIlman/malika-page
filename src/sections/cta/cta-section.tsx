@@ -95,7 +95,7 @@ export function CTASection() {
     const encodedText = encodeURIComponent(text);
     
     // Using the WA link from config but stripping the base url to just use wa.me standard format
-    const waNumber = siteConfig.links.whatsapp.split('/').pop();
+    const waNumber = siteConfig.links.whatsapp.split('/').pop()?.split('?')[0];
     const waUrl = `https://wa.me/${waNumber}?text=${encodedText}`;
     
     window.open(waUrl, "_blank");
