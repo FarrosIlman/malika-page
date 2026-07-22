@@ -106,6 +106,7 @@ function TestimonialCard({
 export function TestimonialsSection() {
   return (
     <section
+      id="testimonials"
       className="py-24 relative overflow-hidden"
     >
       <Container>
