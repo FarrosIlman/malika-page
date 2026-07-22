@@ -57,7 +57,7 @@ export function Footer() {
           </div>
 
           {/* Legal */}
-          <div>
+          <div className="col-span-2 sm:col-span-1 md:col-span-1">
             <h4 className="text-xs text-muted tracking-widest uppercase mb-5">Legal</h4>
             <ul className="space-y-3 text-sm text-muted/80">
               <li><Link href="/privacy" className="hover:text-primary transition-colors">Privasi</Link></li>
