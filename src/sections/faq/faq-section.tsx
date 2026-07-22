@@ -14,7 +14,7 @@ export function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-24 relative overflow-hidden">
+    <section id="faq" className="py-24 relative">
       <Container>
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Left Column: Heading */}
