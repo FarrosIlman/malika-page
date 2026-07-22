@@ -8,10 +8,11 @@ import { Container } from "@/components/shared/container";
 import Image from "next/image";
 
 const navLinks = [
-  { href: "#services", label: "Layanan" },
-  { href: "#portfolio", label: "Portofolio" },
-  { href: "#process", label: "Proses" },
-  { href: "#contact", label: "Kontak" },
+  { href: "/", label: "Home" },
+  { href: "/#services", label: "Layanan" },
+  { href: "/academic", label: "Akademik" },
+  { href: "/#portfolio", label: "Portofolio" },
+  { href: "/#contact", label: "Kontak" },
 ];
 
 export function Navbar() {

@@ -4,6 +4,7 @@ import { m as motion } from "framer-motion";
 import { Container } from "@/components/shared/container";
 import { pricingPlans } from "@/data/pricing";
 import { CheckCircle2, ShieldCheck, Clock, Award } from "lucide-react";
+import Link from "next/link";
 
 export function PricingSection() {
   return (
@@ -69,7 +70,7 @@ export function PricingSection() {
                   </div>
                 </div>
 
-                <ul className="space-y-3 relative z-10">
+                <ul className="space-y-3 relative z-10 mb-6">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-3 text-sm text-muted/90">
                       <CheckCircle2 className="w-4 h-4 text-primary/70 mt-0.5 flex-shrink-0" />
@@ -77,6 +78,17 @@ export function PricingSection() {
                     </li>
                   ))}
                 </ul>
+
+                {plan.id === "joki-tugas" && (
+                  <div className="relative z-10 mt-auto pt-4 border-t border-white/5">
+                    <Link 
+                      href="/academic" 
+                      className="inline-flex items-center justify-center w-full py-2.5 px-4 text-sm font-medium text-white bg-primary/20 hover:bg-primary/30 border border-primary/30 rounded-xl transition-colors"
+                    >
+                      Lihat Detail Layanan Akademik
+                    </Link>
+                  </div>
+                )}
               </motion.div>
             );
           })}
