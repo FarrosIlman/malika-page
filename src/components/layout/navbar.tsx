@@ -20,6 +20,7 @@ const homeLinks = [
 const academicLinks = [
   { href: "/", label: "Home" },
   { href: "#pricing", label: "Harga" },
+  { href: "#portfolio", label: "Portofolio" },
   { href: "#testimonials", label: "Testimoni" },
   { href: "#faq", label: "FAQ" },
 ];
