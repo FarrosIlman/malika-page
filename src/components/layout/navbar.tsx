@@ -7,7 +7,9 @@ import { cn } from "@/lib/utils/cn";
 import { Container } from "@/components/shared/container";
 import Image from "next/image";
 
-const navLinks = [
+import { usePathname } from "next/navigation";
+
+const homeLinks = [
   { href: "/", label: "Home" },
   { href: "/#services", label: "Layanan" },
   { href: "/academic", label: "Akademik" },
@@ -15,9 +17,19 @@ const navLinks = [
   { href: "/#contact", label: "Kontak" },
 ];
 
+const academicLinks = [
+  { href: "/", label: "Home" },
+  { href: "#pricing", label: "Harga" },
+  { href: "#testimonials", label: "Testimoni" },
+  { href: "#faq", label: "FAQ" },
+];
+
 export function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  const currentLinks = pathname === "/academic" ? academicLinks : homeLinks;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -55,7 +67,7 @@ export function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-10" aria-label="Main navigation">
-          {navLinks.map((link) => (
+          {currentLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -120,7 +132,7 @@ export function Navbar() {
               className="absolute top-[72px] left-0 right-0 bg-[#0d0d0f]/95 backdrop-blur-3xl border-b border-white/10 shadow-2xl overflow-hidden z-50 md:hidden rounded-none"
             >
               <div className="flex flex-col p-4">
-                {navLinks.map((link) => (
+                {currentLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
