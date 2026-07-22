@@ -59,6 +59,7 @@ export function Navbar() {
             alt="Malika Digital Logo" 
             width={40} 
             height={40} 
+            priority={true}
             className="rounded-full object-cover border border-white/10 shadow-sm"
           />
           <span className="text-base font-bold tracking-widest text-foreground uppercase">
