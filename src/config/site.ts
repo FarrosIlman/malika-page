@@ -6,6 +6,10 @@ export const siteConfig = {
   ogImage: "https://malika-page.vercel.app/og.jpg",
   keywords: [
     "Software House",
+    "Software House Pekalongan",
+    "Software House Indonesia",
+    "Software House Global",
+    "Jasa Pembuatan Aplikasi Worldwide",
     "Web Development",
     "Bikin Website",
     "Jasa Pembuatan Aplikasi",
@@ -20,6 +24,14 @@ export const siteConfig = {
     email: "mailto:hello@malikadigital.my.id",
     whatsapp: "https://wa.me/6285960120259?text=Halo%20Malika%20Digital,%20saya%20ingin%20berkonsultasi%20mengenai%20layanan%20Anda.",
   },
+  contact: {
+    phone: "+6285960120259",
+    email: "hello@malikadigital.my.id",
+  },
+  location: {
+    address: "Pekalongan, Jawa Tengah, Indonesia",
+    country: "ID",
+  }
 }
 
 export type SiteConfig = typeof siteConfig

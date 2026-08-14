@@ -1,5 +1,15 @@
+import { Metadata } from "next";
+import { siteConfig } from "@/config/site";
 import { HeroSection } from "@/sections/hero/hero-section";
 import { TechStackMarquee } from "@/sections/tech-stack/tech-stack-marquee";
+
+export const metadata: Metadata = {
+  title: siteConfig.title,
+  description: siteConfig.description,
+  alternates: {
+    canonical: siteConfig.url,
+  },
+};
 import { FeaturesSection } from "@/sections/features/features-section";
 import { ShowcaseSection } from "@/sections/showcase/showcase-section";
 import { PricingSection } from "@/sections/pricing/pricing-section";

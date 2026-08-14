@@ -8,15 +8,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Since the portfolio is displayed on the home page, we just map the static routes.
 
   const routes = [
-    '',
-    '/academic',
-    '/privacy',
-    '/terms',
+    { url: '', priority: 1, changeFrequency: 'weekly' as const },
+    { url: '/academic', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/privacy', priority: 0.5, changeFrequency: 'yearly' as const },
+    { url: '/terms', priority: 0.5, changeFrequency: 'yearly' as const },
   ].map((route) => ({
-    url: `${baseUrl}${route}`,
+    url: `${baseUrl}${route.url}`,
     lastModified: new Date().toISOString(),
-    changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1 : 0.8,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
   }))
 
   return [...routes]
