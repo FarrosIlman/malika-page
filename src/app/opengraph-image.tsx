@@ -40,8 +40,8 @@ export default async function Image() {
         {logoSrc && (
           <img
             src={logoSrc}
-            width="480"
-            height="480"
+            width={480}
+            height={480}
             style={{
               position: 'absolute',
               right: -100,
@@ -94,8 +94,8 @@ export default async function Image() {
               {logoSrc ? (
                 <img
                   src={logoSrc}
-                  width="52"
-                  height="52"
+                  width={52}
+                  height={52}
                   style={{
                     marginRight: '16px',
                     objectFit: 'contain',

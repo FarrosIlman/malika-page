@@ -1,13 +1,21 @@
 import { MetadataRoute } from 'next'
 import { siteConfig } from '@/config/site'
+import { client } from '@/sanity/lib/client'
+import { portfolioSlugsQuery } from '@/sanity/lib/queries'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = siteConfig.url
 
-  // If we had dynamic portfolio pages (e.g., /portfolio/foo), we would fetch them here.
-  // Since the portfolio is displayed on the home page, we just map the static routes.
+  // 1. Fetch dynamic portfolio slugs from Sanity CMS
+  const portfolioSlugs = await client.fetch<string[]>(portfolioSlugsQuery)
+  const dynamicRoutes = portfolioSlugs.map((slug) => ({
+    url: `${baseUrl}/portfolio/${slug}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
 
-  const routes = [
+  const staticRoutes = [
     { url: '', priority: 1, changeFrequency: 'weekly' as const },
     { url: '/academic', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/privacy', priority: 0.5, changeFrequency: 'yearly' as const },
@@ -19,5 +27,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route.priority,
   }))
 
-  return [...routes]
+  return [...staticRoutes, ...dynamicRoutes]
 }
