@@ -17,7 +17,7 @@ export const siteConfig = {
   ],
   links: {
     instagram: "https://instagram.com/malika.joki",
-    email: "mailto:hello@malikadigital.com",
+    email: "mailto:hello@malikadigital.my.id",
     whatsapp: "https://wa.me/6285960120259?text=Halo%20Malika%20Digital,%20saya%20ingin%20berkonsultasi%20mengenai%20layanan%20Anda.",
   },
 }

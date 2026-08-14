@@ -248,7 +248,7 @@ export default async function Image() {
             }}
           >
             <div style={{ fontSize: 20, color: '#ffffff', fontWeight: 600, display: 'flex' }}>
-              malikadigital.com
+              malikadigital.my.id
             </div>
             <div
               style={{
