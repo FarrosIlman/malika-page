@@ -56,7 +56,7 @@ export const pricingPlans = [
       "RSVP via WhatsApp",
       "Amplop Digital (e-Wallet)",
       "Google Maps Integration",
-      "Nama Tamu Tanpa Batas",
+      "Nama Tamu Tanpa Batas (Khusus Paket Premium)",
     ],
   },
 ];
