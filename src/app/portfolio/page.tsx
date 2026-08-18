@@ -17,8 +17,6 @@ export const metadata: Metadata = {
   },
 };
 
-import { MotionProvider } from "@/providers/motion-provider";
-
 export default async function FullPortfolioPage() {
   let projects = fallbackShowcase;
 
@@ -34,17 +32,16 @@ export default async function FullPortfolioPage() {
   }
 
   return (
-    <MotionProvider>
-      <div className="py-24 min-h-screen">
-        <Container>
+    <div className="pt-32 pb-24 min-h-screen">
+      <Container>
         {/* Back button */}
-        <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-12 transition-colors">
+        <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors">
           <ArrowLeft className="w-4 h-4" />
           <span>Kembali ke Beranda</span>
         </Link>
 
         {/* Header */}
-        <div className="relative flex flex-col items-center text-center space-y-6 max-w-3xl mx-auto mb-20 mt-8">
+        <div className="relative flex flex-col items-center text-center space-y-4 max-w-3xl mx-auto mb-16">
           {/* Subtle Glow Background */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/10 blur-[100px] -z-10 rounded-full pointer-events-none" />
 
@@ -62,7 +59,7 @@ export default async function FullPortfolioPage() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-16">
           {projects.map((project: any, index: number) => (
             <ProjectCard
               key={project.id || project._id}
@@ -78,6 +75,5 @@ export default async function FullPortfolioPage() {
         </div>
       </Container>
     </div>
-    </MotionProvider>
   );
 }
