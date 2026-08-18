@@ -82,7 +82,7 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center">
           <Link
-            href="#contact"
+            href="/#contact"
             className="text-sm font-medium text-primary-foreground bg-primary hover:opacity-90 transition-opacity px-5 py-2 rounded-full shadow-[0_0_20px_rgba(59,130,246,0.3)]"
           >
             Mulai Diskusi
@@ -147,7 +147,7 @@ export function Navbar() {
                 <div className="h-px bg-white/5 my-2 mx-4" />
                 <div className="p-4">
                   <Link
-                    href="#contact"
+                    href="/#contact"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="w-full flex justify-center items-center text-sm font-medium text-primary-foreground bg-primary hover:opacity-90 transition-opacity px-5 py-3.5 rounded-xl shadow-[0_0_20px_rgba(59,130,246,0.2)]"
                   >
