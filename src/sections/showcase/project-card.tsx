@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { m as motion, useScroll } from "framer-motion";
+import { m as motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
@@ -98,6 +98,9 @@ export function ProjectCard({
     offset: ["start end", "end start"],
   });
   
+  // Parallax effect: even indexed cards move slightly slower/differently than odd indexed cards
+  const parallaxY = useTransform(scrollYProgress, [0, 1], [0, index % 2 === 0 ? -30 : -60]);
+
   return (
     <motion.article
       ref={ref}
@@ -108,7 +111,7 @@ export function ProjectCard({
       aria-label={`Project: ${title}`}
       className="flex flex-col h-full"
     >
-      <div className="flex flex-col h-full">
+      <motion.div style={{ y: parallaxY }} className="flex flex-col h-full">
         <div className="mb-5 overflow-hidden rounded-2xl group transition-transform duration-300 hover:scale-[1.02]">
           <ProjectImageFrame image={image} title={title} link={link} />
         </div>
@@ -131,7 +134,7 @@ export function ProjectCard({
             </span>
           ))}
         </div>
-      </div>
+      </motion.div>
     </motion.article>
   );
 }
