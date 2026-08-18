@@ -2,8 +2,8 @@ export const siteConfig = {
   name: "Malika Digital Solutions",
   title: "Malika Digital Solutions | Software House & Academic Tech Partner",
   description: "Software house dan digital agency terpercaya. Melayani pembuatan aplikasi web (SaaS/ERP), UI/UX design modern, hingga konsultasi dan pendampingan proyek akademik IT (skripsi/tugas akhir) secara profesional.",
-  url: "https://malika-page.vercel.app",
-  ogImage: "https://malika-page.vercel.app/og.jpg",
+  url: "https://malikadigital.my.id",
+  ogImage: "https://malikadigital.my.id/opengraph-image",
   keywords: [
     "Software House",
     "Software House Pekalongan",
