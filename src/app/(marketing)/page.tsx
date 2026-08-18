@@ -28,9 +28,8 @@ export default async function Home() {
     if (client.config().projectId) {
       const count = await client.fetch<number>(`count(*[_type == "portfolio"])`, {}, { next: { revalidate: 60 } });
       if (typeof count === 'number' && count > 0) {
-        // We use Math.max to ensure the number doesn't drop below the initial 12 claim 
-        // while they are still migrating/adding portfolios to Sanity
-        projectCount = Math.max(12, count); 
+        // Tampilkan sesuai jumlah aslinya di Sanity, berapapun itu.
+        projectCount = count;
       }
     }
   } catch (error) {

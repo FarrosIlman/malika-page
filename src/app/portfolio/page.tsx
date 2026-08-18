@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { MotionProvider } from "@/providers/motion-provider";
+
 export default async function FullPortfolioPage() {
   let projects = fallbackShowcase;
 
@@ -32,8 +34,9 @@ export default async function FullPortfolioPage() {
   }
 
   return (
-    <div className="py-24 min-h-screen">
-      <Container>
+    <MotionProvider>
+      <div className="py-24 min-h-screen">
+        <Container>
         {/* Back button */}
         <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-12 transition-colors">
           <ArrowLeft className="w-4 h-4" />
@@ -72,5 +75,6 @@ export default async function FullPortfolioPage() {
         </div>
       </Container>
     </div>
+    </MotionProvider>
   );
 }
