@@ -61,7 +61,7 @@ export function AcademicPricing() {
             Transparan. Terjangkau.
           </h2>
           <p className="text-muted leading-relaxed text-lg">
-            Kami memahami *budget* mahasiswa. Harga kami sangat kompetitif dengan jaminan kualitas kode yang rapi dan siap dipresentasikan di depan dosen penguji.
+            Kami memahami <b>budget</b> mahasiswa. Harga kami sangat kompetitif dengan jaminan kualitas kode yang rapi dan siap dipresentasikan di depan dosen penguji.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export function AcademicPricing() {
                   backdropFilter: "blur(12px)",
                 }}
               >
-                <div 
+                <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{
                     background: "radial-gradient(circle at top right, rgba(52, 211, 153, 0.08), transparent 50%)"
@@ -109,7 +109,7 @@ export function AcademicPricing() {
                   ))}
                 </ul>
 
-                <Link 
+                <Link
                   href="https://wa.me/6285960120259?text=Halo%20Malika%20Digital,%20saya%20ingin%20tanya%20harga%20untuk%20tugas/skripsi%20saya."
                   target="_blank"
                   className="mt-auto inline-flex items-center justify-center w-full py-2.5 px-4 text-sm font-medium text-white bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/30 rounded-xl transition-colors relative z-10"
