@@ -11,6 +11,17 @@ export const portfolioQuery = groq`*[_type == "portfolio"] | order(_createdAt de
   link
 }`
 
+export const portfolioFeaturedQuery = groq`*[_type == "portfolio"] | order(_createdAt desc)[0...6] {
+  _id,
+  title,
+  "slug": slug.current,
+  category,
+  description,
+  tags,
+  "image": image.asset->url,
+  link
+}`
+
 export const portfolioSlugsQuery = groq`*[_type == "portfolio" && defined(slug.current)][].slug.current`
 
 export const portfolioBySlugQuery = groq`*[_type == "portfolio" && slug.current == $slug][0] {

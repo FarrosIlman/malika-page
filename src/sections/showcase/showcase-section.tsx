@@ -4,15 +4,16 @@ import { ArrowUpRight } from "lucide-react";
 import { ProjectCard } from "./project-card";
 import { TextReveal } from "@/components/shared/text-reveal";
 import { client } from "@/sanity/lib/client";
-import { portfolioQuery } from "@/sanity/lib/queries";
+import { portfolioFeaturedQuery } from "@/sanity/lib/queries";
+import Link from "next/link";
 
 export async function ShowcaseSection() {
-  let projects = fallbackShowcase;
+  let projects = fallbackShowcase.slice(0, 6);
 
   try {
     // Attempt to fetch from Sanity if projectId is configured
     if (client.config().projectId) {
-      const sanityData = await client.fetch(portfolioQuery, {}, { next: { revalidate: 60 } });
+      const sanityData = await client.fetch(portfolioFeaturedQuery, {}, { next: { revalidate: 60 } });
       if (sanityData && sanityData.length > 0) {
         projects = sanityData;
       }
@@ -39,14 +40,14 @@ export async function ShowcaseSection() {
               className="text-display text-4xl md:text-5xl leading-[1.1] text-foreground" 
             />
           </div>
-          <a
-            href="#"
+          <Link
+            href="/portfolio"
             className="flex items-center gap-2 text-sm text-muted hover:text-primary transition-colors whitespace-nowrap font-medium"
             aria-label="View all projects"
           >
             Explore all works
             <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
-          </a>
+          </Link>
         </div>
 
         {/* Grid */}

@@ -12,7 +12,7 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.6, delay, ease: easing },
 });
 
-export function HeroText() {
+export function HeroText({ projectCount = 12 }: { projectCount?: number }) {
   return (
     <div className="flex-1 z-10 space-y-10">
       {/* Label - Terminal Style */}
@@ -72,7 +72,7 @@ export function HeroText() {
           <span className="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400">
             ✓
           </span>
-          <span>12+ proyek berhasil diselesaikan</span>
+          <span>{projectCount}+ proyek berhasil diselesaikan</span>
         </div>
       </motion.div>
     </div>

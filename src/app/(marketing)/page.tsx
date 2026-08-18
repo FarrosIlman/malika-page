@@ -20,10 +20,26 @@ import { TestimonialsSection } from "@/sections/testimonials/testimonials-sectio
 import { FAQSection } from "@/sections/faq/faq-section";
 import { CTASection } from "@/sections/cta/cta-section";
 
-export default function Home() {
+import { client } from "@/sanity/lib/client";
+
+export default async function Home() {
+  let projectCount = 12;
+  try {
+    if (client.config().projectId) {
+      const count = await client.fetch<number>(`count(*[_type == "portfolio"])`, {}, { next: { revalidate: 60 } });
+      if (typeof count === 'number' && count > 0) {
+        // We use Math.max to ensure the number doesn't drop below the initial 12 claim 
+        // while they are still migrating/adding portfolios to Sanity
+        projectCount = Math.max(12, count); 
+      }
+    }
+  } catch (error) {
+    console.warn("Failed to fetch project count:", error);
+  }
+
   return (
     <div className="flex flex-col">
-      <HeroSection />
+      <HeroSection projectCount={projectCount} />
       <TechStackMarquee />
       <FeaturesSection />
       <ShowcaseSection />
