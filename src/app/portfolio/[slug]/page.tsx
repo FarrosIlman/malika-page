@@ -55,11 +55,11 @@ export default async function PortfolioPage({ params }: Props) {
   }
 
   return (
-    <div className="py-24 min-h-screen">
+    <div className="pt-32 pb-24 min-h-screen">
       <Container>
-        <Link href="/#portfolio" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors">
+        <Link href="/portfolio" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors">
           <ArrowLeft className="w-4 h-4" />
-          <span>Kembali ke Beranda</span>
+          <span>Kembali ke Portofolio</span>
         </Link>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
           <div className="space-y-6">
