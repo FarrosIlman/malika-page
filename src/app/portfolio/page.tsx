@@ -44,16 +44,19 @@ export default async function FullPortfolioPage() {
         </Link>
 
         {/* Header */}
-        <div className="flex flex-col space-y-4 max-w-2xl mb-16">
+        <div className="relative flex flex-col items-center text-center space-y-6 max-w-3xl mx-auto mb-20 mt-8">
+          {/* Subtle Glow Background */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/10 blur-[100px] -z-10 rounded-full pointer-events-none" />
+
           <span className="badge-terminal w-max">
             <span aria-hidden="true">&gt;_</span>
             Our Portfolio
           </span>
           <TextReveal 
             text="Seluruh Software & Sistem yang Kami Kembangkan" 
-            className="text-display text-4xl md:text-5xl leading-[1.1] text-foreground" 
+            className="text-display text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-foreground justify-center" 
           />
-          <p className="text-muted text-lg mt-4 leading-relaxed">
+          <p className="text-muted text-lg md:text-xl leading-relaxed max-w-2xl">
             Eksplorasi kumpulan project digital yang telah kami bangun dengan teknologi modern dan performa tinggi untuk mendukung pertumbuhan bisnis serta operasional mitra kami.
           </p>
         </div>
