@@ -2,7 +2,7 @@
 
 import { m as motion } from "framer-motion";
 import { Container } from "@/components/shared/container";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Globe, Mail } from "lucide-react";
 import Link from "next/link";
 
 const teamMembers = [
@@ -81,7 +81,7 @@ export function TeamSection() {
                     <Github className="w-4 h-4" />
                   </Link>
                   <Link href="#" className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-white hover:bg-white/10 transition-colors">
-                    <Linkedin className="w-4 h-4" />
+                    <Globe className="w-4 h-4" />
                   </Link>
                   <Link href="#" className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-white hover:bg-white/10 transition-colors">
                     <Mail className="w-4 h-4" />
