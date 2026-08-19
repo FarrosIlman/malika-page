@@ -19,6 +19,8 @@ import { StatisticsSection } from "@/sections/statistics/statistics-section";
 import { TestimonialsSection } from "@/sections/testimonials/testimonials-section";
 import { FAQSection } from "@/sections/faq/faq-section";
 import { CTASection } from "@/sections/cta/cta-section";
+import { AboutHeroSection } from "@/sections/about/about-hero-section";
+import { TeamSection } from "@/sections/about/team-section";
 
 import { client } from "@/sanity/lib/client";
 
@@ -46,6 +48,10 @@ export default async function Home() {
       <TimelineSection />
       <TipsSection />
       <StatisticsSection />
+      <div id="about">
+        <AboutHeroSection />
+        <TeamSection />
+      </div>
       <TestimonialsSection />
       <FAQSection />
       <CTASection />

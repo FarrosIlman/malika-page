@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 
 const homeLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "Tentang Kami" },
+  { href: "/#about", label: "Tentang Kami" },
   { href: "/#services", label: "Layanan" },
   { href: "/academic", label: "Akademik" },
   { href: "/#portfolio", label: "Portofolio" },
@@ -22,6 +22,7 @@ const academicLinks = [
   { href: "/", label: "Home" },
   { href: "#pricing", label: "Harga" },
   { href: "#portfolio", label: "Portofolio" },
+  { href: "#about", label: "Tim Kami" },
   { href: "#testimonials", label: "Testimoni" },
   { href: "#faq", label: "FAQ" },
 ];

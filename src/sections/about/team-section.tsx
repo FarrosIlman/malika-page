@@ -65,9 +65,9 @@ export function TeamSection() {
                 }}
               />
               
-              <div className="aspect-square rounded-2xl overflow-hidden mb-6 bg-white/5 border border-white/10 relative">
+              <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-6 bg-white/5 border border-emerald-500/10 relative shadow-[0_0_20px_rgba(52,211,153,0.05)]">
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#1a1a1f] to-[#0a0a0c]">
-                   <span className="text-6xl font-bold text-white/5 uppercase group-hover:scale-110 transition-transform duration-500 group-hover:text-emerald-400/10">{member.initials}</span>
+                   <span className="text-2xl font-bold text-white/20 uppercase group-hover:scale-110 transition-transform duration-500 group-hover:text-emerald-400/40">{member.initials}</span>
                 </div>
               </div>
 
