@@ -51,7 +51,7 @@ export function TeamSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="group relative p-6 rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-1 bg-black/5 dark:bg-[#141416]/50 backdrop-blur-md border border-black/5 dark:border-white/5"
+              className="group relative p-6 rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-[#141416]/50 backdrop-blur-md border border-black/5 dark:border-white/5 shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:shadow-none"
             >
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
