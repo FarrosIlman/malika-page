@@ -46,7 +46,7 @@ export function Navbar() {
       className={cn(
         "fixed top-0 w-full z-[9999] transition-all duration-500",
         scrolled || isMobileMenuOpen
-          ? "border-b py-4 bg-background/85 dark:bg-[#0d0d0f]/85 backdrop-blur-[16px] border-black/5 dark:border-[#8b80f8]/10"
+          ? "border-b py-4 bg-glass backdrop-blur-[16px] border-black/5 dark:border-[#8b80f8]/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)]"
           : "border-b border-transparent py-6 bg-transparent"
       )}
     >
@@ -158,6 +158,6 @@ export function Navbar() {
           </>
         )}
       </AnimatePresence>
-    </motion.header>
+    </header>
   );
 }
