@@ -66,7 +66,7 @@ function TestimonialCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: EASE }}
-      className="p-8 rounded-2xl flex flex-col h-full bg-black/5 dark:bg-[#141416] border border-black/5 dark:border-[#8b80f8]/15"
+      className="p-8 rounded-2xl flex flex-col h-full bg-white dark:bg-[#141416] border border-black/5 dark:border-[#8b80f8]/15 shadow-[0_2px_20px_rgba(0,0,0,0.04)] dark:shadow-none"
     >
       {/* Quote */}
       <blockquote className="flex-1">

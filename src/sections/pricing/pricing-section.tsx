@@ -44,7 +44,7 @@ export function PricingSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative p-8 rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-1 bg-black/5 dark:bg-[#141416]/50 backdrop-blur-md border border-black/5 dark:border-[#8b80f8]/10"
+                className="group relative p-8 rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-[#141416]/50 backdrop-blur-md border border-black/5 dark:border-[#8b80f8]/10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:shadow-none"
               >
                 {/* Glow effect on hover */}
                 <div 
