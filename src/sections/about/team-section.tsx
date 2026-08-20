@@ -2,7 +2,7 @@
 
 import { m as motion } from "framer-motion";
 import { Container } from "@/components/shared/container";
-import { Code2, Globe, Mail } from "lucide-react";
+import { Code2, Globe, Mail, Bird, Rabbit, Cat } from "lucide-react";
 import Link from "next/link";
 
 const teamMembers = [
@@ -10,19 +10,19 @@ const teamMembers = [
     name: "Dimas Wibowo",
     role: "Operations & Client Relations",
     desc: "Bertanggung jawab pada komunikasi klien, manajemen layanan, dan memastikan setiap kebutuhan proyek klien terakomodasi dengan baik.",
-    avatar: "🦉",
+    avatar: Bird,
   },
   {
     name: "Mohammad Firdan",
     role: "Full-Stack Developer",
     desc: "Mengeksekusi pengembangan produk secara end-to-end, merancang arsitektur aplikasi, dan menjaga standar kualitas kode yang efisien.",
-    avatar: "🐙",
+    avatar: Rabbit,
   },
   {
     name: "Muchammad Farros Ilman Haq",
     role: "Full-Stack Developer",
     desc: "Mengeksekusi pengembangan produk secara end-to-end, merancang arsitektur aplikasi, dan menjaga standar kualitas kode yang efisien.",
-    avatar: "🦊",
+    avatar: Cat,
   }
 ];
 
@@ -67,7 +67,10 @@ export function TeamSection() {
               
               <div className="w-20 h-20 mx-auto rounded-full overflow-hidden mb-5 bg-white/5 border border-emerald-500/20 relative shadow-[0_0_20px_rgba(52,211,153,0.1)] group-hover:border-emerald-400/50 transition-colors duration-300">
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#1a1a1f] to-[#0a0a0c]">
-                   <span className="text-4xl group-hover:scale-110 transition-transform duration-300 group-hover:rotate-6">{member.avatar}</span>
+                  {(() => {
+                    const Icon = member.avatar;
+                    return <Icon className="w-8 h-8 text-emerald-400/80 group-hover:scale-110 transition-transform duration-300 group-hover:rotate-6" strokeWidth={1.5} />;
+                  })()}
                 </div>
               </div>
 
