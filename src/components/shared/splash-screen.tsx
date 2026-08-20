@@ -88,7 +88,7 @@ export function SplashScreen() {
 
             {/* 3. WORDMARK — Kinetic Curved Wave & Character Blur Expansion */}
             <div className="mt-9 overflow-hidden py-1">
-              <motion.div className="flex justify-center text-2xl font-light tracking-tight text-white sm:text-3xl font-serif">
+              <motion.div className="flex justify-center text-2xl font-light tracking-tight text-foreground sm:text-3xl font-serif">
                 {title.split("").map((char, index) => (
                   <motion.span
                     key={index}
@@ -137,10 +137,10 @@ export function SplashScreen() {
                   ease: LUXURY_EASE,
                   delay: 1.2,
                 }}
-                className="text-[10px] font-medium uppercase text-white/35 sm:text-[11px]"
+                className="text-[10px] font-medium uppercase text-black/40 dark:text-white/35 sm:text-[11px]"
               >
                 IDE ANDA,{" "}
-                <span className="font-semibold text-blue-400 drop-shadow-[0_0_15px_rgba(96,165,250,0.6)]">
+                <span className="font-semibold text-blue-600 dark:text-blue-400 drop-shadow-[0_0_15px_rgba(37,99,235,0.4)] dark:drop-shadow-[0_0_15px_rgba(96,165,250,0.6)]">
                   SOLUSI KAMI
                 </span>
               </motion.p>
@@ -151,11 +151,11 @@ export function SplashScreen() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.9 }}
-              className="relative mt-12 h-[1px] w-40 overflow-hidden bg-white/[0.04]"
+              className="relative mt-12 h-[1px] w-40 overflow-hidden bg-black/10 dark:bg-white/[0.04]"
             >
               {/* Hairline Progress Fill */}
               <motion.div
-                className="h-full origin-left bg-gradient-to-r from-transparent via-blue-400 to-white"
+                className="h-full origin-left bg-gradient-to-r from-transparent via-blue-500 dark:via-blue-400 to-black dark:to-white"
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 3.5, delay: 0.9, ease: CINEMATIC_EASE }}

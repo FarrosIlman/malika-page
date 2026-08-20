@@ -130,25 +130,26 @@ export function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="absolute top-[72px] left-0 right-0 dark:bg-[#0d0d0f] bg-background/95 backdrop-blur-3xl border-b dark:border-white/10 border-black/10 shadow-2xl overflow-hidden z-50 md:hidden rounded-none"
+              className="absolute top-[72px] left-0 right-0 dark:bg-[#0d0d0f] bg-background/95 backdrop-blur-3xl border-b dark:border-white/10 border-black/10 shadow-2xl overflow-hidden z-50 md:hidden"
             >
-              <div className="flex flex-col p-4">
+              <div className="flex flex-col p-4 gap-1">
                 {currentLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="px-4 py-4 text-base font-medium text-foreground/80 hover:text-primary hover:dark:bg-white/5 bg-black/5 rounded-none transition-all"
+                    className="px-4 py-3 text-base font-medium text-foreground/80 hover:text-primary hover:bg-black/5 hover:dark:bg-white/5 rounded-xl transition-all"
                   >
                     {link.label}
                   </Link>
                 ))}
-                <div className="h-px dark:bg-white/5 bg-black/5 my-2 mx-4" />
-                <div className="p-4">
+                <div className="h-px dark:bg-white/10 bg-black/10 my-2 mx-4" />
+                <div className="px-4 py-2 flex items-center gap-4">
+                  <ThemeToggle />
                   <Link
                     href="/#contact"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="w-full flex justify-center items-center text-sm font-medium text-primary-foreground bg-primary hover:opacity-90 transition-opacity px-5 py-3.5 rounded-xl shadow-[0_0_20px_rgba(59,130,246,0.2)]"
+                    className="flex-1 flex justify-center items-center text-sm font-medium text-primary-foreground bg-primary hover:opacity-90 transition-opacity px-5 py-3.5 rounded-xl shadow-[0_0_20px_rgba(59,130,246,0.2)]"
                   >
                     Mulai Diskusi
                   </Link>
