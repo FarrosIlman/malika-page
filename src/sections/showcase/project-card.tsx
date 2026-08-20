@@ -18,22 +18,16 @@ function ProjectImageFrame({
 }) {
   return (
     <div
-      className="w-full rounded-2xl overflow-hidden relative"
-      style={{ border: "1px solid rgba(139,128,248,0.15)", aspectRatio: "16/10" }}
+      className="w-full rounded-2xl overflow-hidden relative border border-[#8b80f8]/15"
+      style={{ aspectRatio: "16/10" }}
     >
       <div
-        className="absolute top-0 w-full z-10 flex items-center gap-1.5 px-4 py-2.5 border-b"
-        style={{
-          backgroundColor: "rgba(15, 15, 28, 0.9)",
-          backdropFilter: "blur(4px)",
-          borderColor: "rgba(139,128,248,0.1)",
-        }}
+        className="absolute top-0 w-full z-10 flex items-center gap-1.5 px-4 py-2.5 border-b bg-surface/90 dark:bg-[#0f0f1c]/90 border-[#8b80f8]/10 backdrop-blur-sm"
       >
         <span className="w-2 h-2 rounded-full bg-red-500/50" />
         <span className="w-2 h-2 rounded-full bg-yellow-500/50" />
         <span className="w-2 h-2 rounded-full bg-green-500/50" />
         <div
-          className="ml-2 flex-1 h-4 rounded text-[10px] text-muted/40 flex items-center px-2 font-mono"
           style={{ backgroundColor: "rgba(255,255,255,0.03)" }}
         >
           {title.toLowerCase().replace(/\s+/g, "-")}.co

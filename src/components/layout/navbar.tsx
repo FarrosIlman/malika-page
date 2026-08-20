@@ -42,20 +42,15 @@ export function Navbar() {
   }, []);
 
   return (
-    <header
+    <motion.header
       className={cn(
-        "fixed top-0 w-full z-[9999] transition-all duration-500",
+        "fixed top-4 left-0 right-0 z-50 transition-all duration-300",
         scrolled || isMobileMenuOpen
-          ? "border-b py-4"
-          : "border-b border-transparent py-6"
+          ? "bg-background/85 dark:bg-[#0d0d0f]/85 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-black/10 dark:border-white/10"
+          : "bg-transparent border-transparent"
       )}
-      style={scrolled || isMobileMenuOpen ? {
-        backgroundColor: "rgba(13, 13, 15, 0.85)",
-        backdropFilter: "blur(16px)",
-        borderColor: "rgba(139, 128, 248, 0.1)",
-      } : {}}
     >
-      <Container className="flex items-center justify-between">
+      <Container className="flex items-center justify-between py-2">
         <Link href="/" className="group flex items-center gap-3 relative z-50">
           <Image 
             src="/logo.jpg" 
@@ -163,6 +158,6 @@ export function Navbar() {
           </>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 }

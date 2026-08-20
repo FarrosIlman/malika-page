@@ -75,12 +75,7 @@ export function AcademicPricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative p-8 rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-1 flex flex-col"
-                style={{
-                  backgroundColor: "rgba(20,20,22,0.5)",
-                  border: "1px solid rgba(52, 211, 153, 0.15)",
-                  backdropFilter: "blur(12px)",
-                }}
+                className="group relative p-8 rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-1 flex flex-col bg-black/5 dark:bg-[#141416]/50 backdrop-blur-md border border-black/5 dark:border-[#34d399]/15"
               >
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"

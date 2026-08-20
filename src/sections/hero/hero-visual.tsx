@@ -29,11 +29,11 @@ export function HeroVisual() {
         initial={{ opacity: 0, scale: 0.9, y: -20, rotate: -2 }}
         animate={{ opacity: 0.6, scale: 0.95, y: -40, rotate: -4 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        style={{ backgroundColor: "#1c1c28", borderColor: "rgba(139,128,248,0.15)", y: y1 }}
-        className="absolute top-0 right-2 sm:right-4 w-[95%] sm:w-[90%] rounded-2xl border overflow-hidden shadow-2xl z-0"
+        style={{ y: y1 }}
+        className="absolute top-0 right-2 sm:right-4 w-[95%] sm:w-[90%] rounded-2xl border overflow-hidden shadow-2xl z-0 bg-surface dark:bg-[#1c1c28] border-black/10 dark:border-[#8b80f8]/15"
       >
         {/* Figma-like topbar */}
-        <div className="flex items-center justify-between px-3 py-2 border-b" style={{ borderColor: "rgba(255,255,255,0.05)", backgroundColor: "#252536" }}>
+        <div className="flex items-center justify-between px-3 py-2 border-b border-black/5 dark:border-white/5 bg-background dark:bg-[#252536] rounded-t-xl">
           <div className="flex gap-2">
             <div className="w-4 h-4 rounded bg-[#f24e1e] flex items-center justify-center">
               <div className="w-2 h-2 border-[1.5px] border-white rounded-full" />
@@ -46,7 +46,7 @@ export function HeroVisual() {
           </div>
         </div>
         {/* Figma canvas area */}
-        <div className="h-48 p-4 flex gap-4" style={{ backgroundColor: "#0f0f1c", backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)", backgroundSize: "12px 12px" }}>
+        <div className="h-48 p-4 flex gap-4 bg-background dark:bg-[#0f0f1c]" style={{ backgroundImage: "radial-gradient(circle, rgba(139,128,248,0.05) 1px, transparent 1px)", backgroundSize: "12px 12px" }}>
            <div className="w-1/3 bg-[#8b80f8] rounded shadow-lg" />
            <div className="w-2/3 dark:bg-[#1c1c28] bg-surface border dark:border-white/10 border-black/10 rounded shadow-lg p-2">
               <div className="w-1/2 h-2 bg-white/20 rounded mb-2" />
@@ -61,15 +61,14 @@ export function HeroVisual() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        style={{ y: y2, backgroundColor: "#06060c", borderColor: "rgba(139,128,248,0.15)" }}
-        className="relative z-10 w-[95%] sm:w-full mt-16 sm:mt-12 rounded-2xl border dark:border-white/5 border-black/5 overflow-hidden shadow-2xl"
+        style={{ y: y2 }}
+        className="relative z-10 w-[95%] sm:w-full mt-16 sm:mt-12 rounded-2xl border overflow-hidden shadow-2xl bg-surface dark:bg-[#06060c] border-black/10 dark:border-[#8b80f8]/15"
       >
         {/* Editor tabs */}
         <div
-          className="flex items-end px-2 pt-2 border-b"
-          style={{ borderColor: "rgba(139,128,248,0.1)", backgroundColor: "#0a0a14" }}
+          className="flex items-center px-3 py-2 border-b bg-background dark:bg-[#0a0a14] border-black/5 dark:border-[#8b80f8]/10"
         >
-          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-t-lg dark:bg-[#06060c] bg-surface border border-b-0" style={{ borderColor: "rgba(139,128,248,0.15)" }}>
+          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-t-lg dark:bg-[#06060c] bg-surface border border-b-0 border-[#8b80f8]/15">
             <span className="text-[#22d3ee] text-xs">TS</span>
             <span className="text-xs text-foreground/80 font-mono">App.tsx</span>
           </div>
