@@ -55,7 +55,7 @@ export function FloatingNav() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.5, y: 20 }}
               onClick={scrollToTop}
-              className="p-3 bg-surface border border-white/10 rounded-full shadow-lg text-foreground hover:bg-white/10 transition-colors focus:outline-none"
+              className="p-3 bg-surface border dark:border-white/10 border-black/10 rounded-full shadow-lg text-foreground hover:dark:bg-white/10 bg-black/10 transition-colors focus:outline-none"
               aria-label="Kembali ke atas"
             >
               <ArrowUp className="w-5 h-5" />
@@ -100,7 +100,7 @@ export function FloatingNav() {
               repeat: Infinity, 
               ease: "easeInOut"
             }}
-            className="absolute right-full mr-4 px-4 py-2 bg-surface/90 backdrop-blur-sm border border-white/10 text-sm font-medium rounded-xl pointer-events-none whitespace-nowrap text-foreground shadow-lg"
+            className="absolute right-full mr-4 px-4 py-2 bg-surface/90 backdrop-blur-sm border dark:border-white/10 border-black/10 text-sm font-medium rounded-xl pointer-events-none whitespace-nowrap text-foreground shadow-lg"
           >
             Konsultasi via WhatsApp
           </motion.div>

@@ -85,14 +85,14 @@ export function AboutHeroSection() {
              transition={{ duration: 0.5, delay: 0.4 }}
              className="relative"
           >
-            <div className="aspect-[4/3] md:aspect-square max-w-sm mx-auto rounded-3xl overflow-hidden border border-white/10 relative group">
+            <div className="aspect-[4/3] md:aspect-square max-w-sm mx-auto rounded-3xl overflow-hidden border dark:border-white/10 border-black/10 relative group">
               <div className="absolute inset-0 bg-emerald-500/5 group-hover:bg-transparent transition-colors duration-500 z-10" />
               <div className="w-full h-full bg-gradient-to-br from-[#0a0a0c] via-[#141416] to-[#0a0a0c] flex items-center justify-center p-6">
                 <div className="text-center space-y-3 relative z-20">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md mb-2 shadow-[0_0_20px_rgba(52,211,153,0.1)]">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl dark:bg-white/5 bg-black/5 border dark:border-white/10 border-black/10 backdrop-blur-md mb-2 shadow-[0_0_20px_rgba(52,211,153,0.1)]">
                      <span className="text-2xl font-bold text-emerald-400">&gt;_</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white">Build With Purpose</h3>
+                  <h3 className="text-xl font-bold text-foreground">Build With Purpose</h3>
                   <p className="text-muted text-xs max-w-[200px] mx-auto">Kami merancang kode dengan dedikasi penuh untuk masa depan digital Anda.</p>
                 </div>
                 <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-emerald-500/10 rounded-full blur-[60px]" />

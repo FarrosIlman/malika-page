@@ -6,6 +6,7 @@ import { m as motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils/cn";
 import { Container } from "@/components/shared/container";
 import Image from "next/image";
+import { ThemeToggle } from "@/components/shared/theme-toggle";
 
 import { usePathname } from "next/navigation";
 
@@ -62,7 +63,7 @@ export function Navbar() {
             width={40} 
             height={40} 
             priority={true}
-            className="rounded-full object-cover border border-white/10 shadow-sm"
+            className="rounded-full object-cover border dark:border-white/10 border-black/10 shadow-sm"
           />
           <span className="text-base font-bold tracking-widest text-foreground uppercase">
             Malika
@@ -82,7 +83,8 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center">
+        <div className="hidden md:flex items-center gap-4">
+          <ThemeToggle />
           <Link
             href="/#contact"
             className="text-sm font-medium text-primary-foreground bg-primary hover:opacity-90 transition-opacity px-5 py-2 rounded-full shadow-[0_0_20px_rgba(59,130,246,0.3)]"
@@ -133,7 +135,7 @@ export function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="absolute top-[72px] left-0 right-0 bg-[#0d0d0f]/95 backdrop-blur-3xl border-b border-white/10 shadow-2xl overflow-hidden z-50 md:hidden rounded-none"
+              className="absolute top-[72px] left-0 right-0 dark:bg-[#0d0d0f] bg-background/95 backdrop-blur-3xl border-b dark:border-white/10 border-black/10 shadow-2xl overflow-hidden z-50 md:hidden rounded-none"
             >
               <div className="flex flex-col p-4">
                 {currentLinks.map((link) => (
@@ -141,12 +143,12 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="px-4 py-4 text-base font-medium text-foreground/80 hover:text-primary hover:bg-white/5 rounded-none transition-all"
+                    className="px-4 py-4 text-base font-medium text-foreground/80 hover:text-primary hover:dark:bg-white/5 bg-black/5 rounded-none transition-all"
                   >
                     {link.label}
                   </Link>
                 ))}
-                <div className="h-px bg-white/5 my-2 mx-4" />
+                <div className="h-px dark:bg-white/5 bg-black/5 my-2 mx-4" />
                 <div className="p-4">
                   <Link
                     href="/#contact"

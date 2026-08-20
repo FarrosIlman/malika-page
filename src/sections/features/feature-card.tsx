@@ -28,7 +28,7 @@ export function FeatureCard({ title, description, icon: Icon, color, bgColor, in
         <Icon className={`w-7 h-7 ${color}`} />
       </div>
       
-      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
+      <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
         {title}
       </h3>
       

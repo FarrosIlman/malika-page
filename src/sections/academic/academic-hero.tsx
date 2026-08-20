@@ -94,9 +94,9 @@ export function AcademicHero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex-1 w-full max-w-lg"
           >
-            <div className="relative rounded-2xl border border-white/5 bg-[#06060c] shadow-2xl">
+            <div className="relative rounded-2xl border dark:border-white/5 border-black/5 dark:bg-[#06060c] bg-surface shadow-2xl">
               {/* Fake IDE Header */}
-              <div className="flex items-center px-4 py-3 border-b border-white/5 bg-[#0a0a14] rounded-t-2xl">
+              <div className="flex items-center px-4 py-3 border-b dark:border-white/5 border-black/5 dark:bg-[#0a0a14] bg-surface rounded-t-2xl">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50" />
                   <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50" />
@@ -122,7 +122,7 @@ export function AcademicHero() {
               <motion.div 
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -right-4 md:-right-8 top-1/4 p-3 bg-[#0d0d12]/90 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl z-20 flex items-center gap-3"
+                className="absolute -right-4 md:-right-8 top-1/4 p-3 dark:bg-[#0d0d12] bg-surface/90 backdrop-blur-md border dark:border-white/10 border-black/10 rounded-2xl shadow-xl z-20 flex items-center gap-3"
               >
                 <div className="p-2 rounded-lg bg-primary/20 text-primary"><Database className="w-5 h-5" /></div>
                 <div className="pr-2 hidden sm:block">
@@ -133,7 +133,7 @@ export function AcademicHero() {
               <motion.div 
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -left-6 bottom-1/4 p-3 bg-[#0d0d12]/90 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl z-20 flex items-center gap-3"
+                className="absolute -left-6 bottom-1/4 p-3 dark:bg-[#0d0d12] bg-surface/90 backdrop-blur-md border dark:border-white/10 border-black/10 rounded-2xl shadow-xl z-20 flex items-center gap-3"
               >
                 <div className="p-2 rounded-lg bg-blue-500/20 text-blue-400"><Code2 className="w-5 h-5" /></div>
                 <div className="pr-2 hidden sm:block">

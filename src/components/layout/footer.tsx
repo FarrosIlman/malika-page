@@ -19,7 +19,7 @@ export function Footer() {
                 alt="Malika Digital Logo" 
                 width={32} 
                 height={32} 
-                className="rounded-full object-cover border border-white/10"
+                className="rounded-full object-cover border dark:border-white/10 border-black/10"
               />
               <span className="text-sm font-medium tracking-widest uppercase text-foreground/90">
                 Malika

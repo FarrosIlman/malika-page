@@ -19,20 +19,20 @@ export function LaptopDashboard() {
         <div className="w-3 h-3 rounded-full bg-red-500/80" />
         <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
         <div className="w-3 h-3 rounded-full bg-green-500/80" />
-        <div className="mx-auto h-4 w-48 bg-white/10 rounded-md" />
+        <div className="mx-auto h-4 w-48 dark:bg-white/10 bg-black/10 rounded-md" />
       </div>
 
       {/* Dashboard Content */}
       <div className="p-6 flex flex-col gap-4 h-full">
         {/* Header */}
         <div className="flex justify-between items-center">
-          <div className="w-32 h-6 bg-white/10 rounded-md" />
+          <div className="w-32 h-6 dark:bg-white/10 bg-black/10 rounded-md" />
           <div className="w-10 h-10 rounded-full bg-primary/20" />
         </div>
 
         {/* Chart Area */}
         <div className="flex-1 flex gap-4">
-          <div className="w-2/3 h-full rounded-lg bg-white/5 border border-white/10 p-4 flex flex-col justify-end gap-2">
+          <div className="w-2/3 h-full rounded-lg dark:bg-white/5 bg-black/5 border dark:border-white/10 border-black/10 p-4 flex flex-col justify-end gap-2">
             <div className="w-full h-32 flex items-end justify-between gap-2">
               {[40, 60, 30, 80, 50, 90, 70].map((h, i) => (
                 <motion.div
@@ -44,7 +44,7 @@ export function LaptopDashboard() {
                 />
               ))}
             </div>
-            <div className="w-full h-1 bg-white/10 rounded-full mt-2" />
+            <div className="w-full h-1 dark:bg-white/10 bg-black/10 rounded-full mt-2" />
           </div>
           <div className="w-1/3 h-full flex flex-col gap-4">
             <div className="flex-1 rounded-lg bg-secondary/10 border border-secondary/20 p-4" />

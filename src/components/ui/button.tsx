@@ -25,7 +25,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         "hover:text-foreground hover:border-[rgba(200,169,126,0.4)] " +
         "transition-colors duration-200",
       ghost:
-        "bg-transparent text-foreground/70 hover:text-foreground hover:bg-white/5 " +
+        "bg-transparent text-foreground/70 hover:text-foreground hover:dark:bg-white/5 bg-black/5 " +
         "transition-colors duration-200",
       link:
         "text-primary underline-offset-4 hover:underline p-0 h-auto",

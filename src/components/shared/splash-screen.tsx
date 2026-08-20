@@ -23,7 +23,7 @@ export function SplashScreen() {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed inset-0 z-[999999] flex items-center justify-center overflow-hidden bg-[#020204] px-4 select-none"
+          className="fixed inset-0 z-[999999] flex items-center justify-center overflow-hidden dark:bg-[#020204] bg-background px-4 select-none"
           initial={{ opacity: 1 }}
           exit={{
             opacity: 0,
@@ -59,7 +59,7 @@ export function SplashScreen() {
               <motion.div
                 animate={{ y: [-3, 3, -3] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.6 }}
-                className="relative h-20 w-20 overflow-hidden rounded-full sm:h-24 sm:w-24 shadow-[0_0_60px_rgba(0,0,0,0.8)] border border-white/10"
+                className="relative h-20 w-20 overflow-hidden rounded-full sm:h-24 sm:w-24 shadow-[0_0_60px_rgba(0,0,0,0.8)] border dark:border-white/10 border-black/10"
               >
                 <Image
                   src="/logo.jpg"

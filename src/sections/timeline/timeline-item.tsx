@@ -15,7 +15,7 @@ export function TimelineItem({ step, title, description, index, isLast }: Timeli
     <div className="relative flex gap-6 md:gap-8">
       {/* Connector Line */}
       {!isLast && (
-        <div className="absolute left-[23px] top-12 bottom-[-24px] w-[2px] bg-white/10" />
+        <div className="absolute left-[23px] top-12 bottom-[-24px] w-[2px] dark:bg-white/10 bg-black/10" />
       )}
       
       {/* Node */}
@@ -37,7 +37,7 @@ export function TimelineItem({ step, title, description, index, isLast }: Timeli
         transition={{ duration: 0.5, delay: index * 0.15 }}
         className="pb-12"
       >
-        <h3 className="text-xl md:text-2xl font-bold text-white mb-3 mt-2">{title}</h3>
+        <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 mt-2">{title}</h3>
         <p className="text-muted text-base leading-relaxed max-w-2xl">
           {description}
         </p>

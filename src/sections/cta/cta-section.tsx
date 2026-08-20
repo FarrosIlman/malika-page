@@ -37,7 +37,7 @@ function CustomSelect({
       <label className="text-xs font-medium text-foreground/80 uppercase tracking-wide">{label}</label>
       <div 
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-foreground cursor-pointer flex justify-between items-center hover:bg-white/10 transition-colors"
+        className="w-full dark:bg-white/5 bg-black/5 border dark:border-white/10 border-black/10 rounded-xl px-4 py-3 text-sm text-foreground cursor-pointer flex justify-between items-center hover:dark:bg-white/10 bg-black/10 transition-colors"
       >
         <span>{value}</span>
         <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
@@ -52,7 +52,7 @@ function CustomSelect({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute z-50 w-full mt-2 bg-[#18181b] border border-white/10 rounded-xl shadow-2xl overflow-hidden"
+            className="absolute z-50 w-full mt-2 dark:bg-[#18181b] bg-surface border dark:border-white/10 border-black/10 rounded-xl shadow-2xl overflow-hidden"
           >
             <div className="max-h-60 overflow-y-auto custom-scrollbar py-1">
               {options.map((option) => (
@@ -65,7 +65,7 @@ function CustomSelect({
                   className={`px-4 py-2.5 text-sm cursor-pointer transition-colors ${
                     value === option 
                       ? "bg-primary/10 text-primary font-medium" 
-                      : "text-foreground/80 hover:bg-white/5 hover:text-foreground"
+                      : "text-foreground/80 hover:dark:bg-white/5 bg-black/5 hover:text-foreground"
                   }`}
                 >
                   {option}
@@ -147,7 +147,7 @@ export function CTASection() {
                 Konsultasikan kebutuhan pembuatan website, sistem enterprise, desain grafis, atau pendampingan IT Anda. Isi form di samping dan tim kami akan merespons secepatnya.
               </p>
 
-              <div className="flex items-center gap-4 text-sm text-muted bg-background/50 w-fit px-5 py-3 rounded-full border border-white/5">
+              <div className="flex items-center gap-4 text-sm text-muted bg-background/50 w-fit px-5 py-3 rounded-full border dark:border-white/5 border-black/5">
                 <MessageSquare className="w-5 h-5 text-primary" />
                 <span>Atau hubungi langsung via <a href={siteConfig.links.whatsapp} target="_blank" rel="noreferrer" className="text-foreground hover:text-primary transition-colors font-medium">WhatsApp</a></span>
               </div>
@@ -155,7 +155,7 @@ export function CTASection() {
 
             {/* Right Column: Form */}
             <div className="lg:w-1/2">
-              <form onSubmit={handleSubmit} className="bg-background/80 p-8 rounded-2xl border border-white/10 space-y-5">
+              <form onSubmit={handleSubmit} className="bg-background/80 p-8 rounded-2xl border dark:border-white/10 border-black/10 space-y-5">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-xs font-medium text-foreground/80 uppercase tracking-wide">Nama Lengkap / Instansi</label>
                   <input
@@ -164,7 +164,7 @@ export function CTASection() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:border-primary/50 focus:bg-white/10 transition-colors"
+                    className="w-full dark:bg-white/5 bg-black/5 border dark:border-white/10 border-black/10 rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:border-primary/50 focus:dark:bg-white/10 bg-black/10 transition-colors"
                     placeholder="John Doe"
                   />
                 </div>
@@ -192,7 +192,7 @@ export function CTASection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     rows={4}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:border-primary/50 focus:bg-white/10 transition-colors resize-none"
+                    className="w-full dark:bg-white/5 bg-black/5 border dark:border-white/10 border-black/10 rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:border-primary/50 focus:dark:bg-white/10 bg-black/10 transition-colors resize-none"
                     placeholder="Ceritakan sedikit tentang kebutuhan atau masalah yang ingin diselesaikan..."
                   ></textarea>
                 </div>

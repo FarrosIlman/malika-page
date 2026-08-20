@@ -48,7 +48,7 @@ export function TipsSection() {
                   style={{ border: "1px solid rgba(139,128,248,0.1)" }}
                 >
                   {/* Icon */}
-                  <div className="w-14 h-14 rounded-2xl bg-background border border-white/10 flex items-center justify-center text-muted group-hover:text-primary group-hover:border-primary/30 transition-colors flex-shrink-0">
+                  <div className="w-14 h-14 rounded-2xl bg-background border dark:border-white/10 border-black/10 flex items-center justify-center text-muted group-hover:text-primary group-hover:border-primary/30 transition-colors flex-shrink-0">
                     <Icon className="w-6 h-6" />
                   </div>
 

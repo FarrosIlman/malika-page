@@ -59,7 +59,7 @@ export default function PrivacyPage() {
               </p>
             </section>
 
-            <div className="pt-8 border-t border-white/10 mt-12">
+            <div className="pt-8 border-t dark:border-white/10 border-black/10 mt-12">
               <p className="text-sm">Terakhir diperbarui: {new Date().toLocaleDateString('id-ID', { month: 'long', year: 'numeric' })}</p>
               <p className="text-sm mt-2">Jika Anda membutuhkan informasi lebih lanjut atau memiliki pertanyaan tentang kebijakan privasi kami, silakan hubungi kami via <a href={siteConfig.links.whatsapp} className="text-primary hover:underline">WhatsApp</a>.</p>
             </div>

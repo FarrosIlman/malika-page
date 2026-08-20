@@ -61,7 +61,7 @@ export function FAQSection() {
                           <motion.div
                             animate={{ rotate: isOpen ? 180 : 0 }}
                             transition={{ duration: 0.3, ease: "easeInOut" }}
-                            className="flex-shrink-0 w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-muted"
+                            className="flex-shrink-0 w-8 h-8 rounded-full dark:bg-white/5 bg-black/5 flex items-center justify-center text-muted"
                           >
                             <ChevronDown className="w-4 h-4" />
                           </motion.div>
@@ -75,7 +75,7 @@ export function FAQSection() {
                               exit={{ height: 0, opacity: 0 }}
                               transition={{ duration: 0.3, ease: "easeInOut" }}
                             >
-                              <div className="px-6 pb-6 pt-2 text-muted text-sm leading-relaxed border-t border-white/5 mx-6">
+                              <div className="px-6 pb-6 pt-2 text-muted text-sm leading-relaxed border-t dark:border-white/5 border-black/5 mx-6">
                                 {q.answer}
                               </div>
                             </motion.div>

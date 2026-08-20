@@ -41,17 +41,17 @@ export function HeroVisual() {
             <div className="text-[10px] text-muted">Brand Identity.fig</div>
           </div>
           <div className="flex gap-1.5">
-            <div className="w-4 h-4 rounded-full bg-white/10" />
-            <div className="w-4 h-4 rounded-full bg-white/10" />
+            <div className="w-4 h-4 rounded-full dark:bg-white/10 bg-black/10" />
+            <div className="w-4 h-4 rounded-full dark:bg-white/10 bg-black/10" />
           </div>
         </div>
         {/* Figma canvas area */}
         <div className="h-48 p-4 flex gap-4" style={{ backgroundColor: "#0f0f1c", backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)", backgroundSize: "12px 12px" }}>
            <div className="w-1/3 bg-[#8b80f8] rounded shadow-lg" />
-           <div className="w-2/3 bg-[#1c1c28] border border-white/10 rounded shadow-lg p-2">
+           <div className="w-2/3 dark:bg-[#1c1c28] bg-surface border dark:border-white/10 border-black/10 rounded shadow-lg p-2">
               <div className="w-1/2 h-2 bg-white/20 rounded mb-2" />
-              <div className="w-3/4 h-2 bg-white/10 rounded mb-1" />
-              <div className="w-5/6 h-2 bg-white/10 rounded" />
+              <div className="w-3/4 h-2 dark:bg-white/10 bg-black/10 rounded mb-1" />
+              <div className="w-5/6 h-2 dark:bg-white/10 bg-black/10 rounded" />
            </div>
         </div>
       </motion.div>
@@ -62,14 +62,14 @@ export function HeroVisual() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
         style={{ y: y2, backgroundColor: "#06060c", borderColor: "rgba(139,128,248,0.15)" }}
-        className="relative z-10 w-[95%] sm:w-full mt-16 sm:mt-12 rounded-2xl border border-white/5 overflow-hidden shadow-2xl"
+        className="relative z-10 w-[95%] sm:w-full mt-16 sm:mt-12 rounded-2xl border dark:border-white/5 border-black/5 overflow-hidden shadow-2xl"
       >
         {/* Editor tabs */}
         <div
           className="flex items-end px-2 pt-2 border-b"
           style={{ borderColor: "rgba(139,128,248,0.1)", backgroundColor: "#0a0a14" }}
         >
-          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-t-lg bg-[#06060c] border border-b-0" style={{ borderColor: "rgba(139,128,248,0.15)" }}>
+          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-t-lg dark:bg-[#06060c] bg-surface border border-b-0" style={{ borderColor: "rgba(139,128,248,0.15)" }}>
             <span className="text-[#22d3ee] text-xs">TS</span>
             <span className="text-xs text-foreground/80 font-mono">App.tsx</span>
           </div>
@@ -156,7 +156,7 @@ export function HeroVisual() {
         </div>
 
         {/* Terminal panel */}
-        <div className="border-t bg-[#0a0a14] p-3 font-mono text-[10px]" style={{ borderColor: "rgba(139,128,248,0.1)" }}>
+        <div className="border-t dark:bg-[#0a0a14] bg-surface p-3 font-mono text-[10px]" style={{ borderColor: "rgba(139,128,248,0.1)" }}>
           <div className="flex items-center gap-2 mb-1">
             <span className="text-muted uppercase">Terminal</span>
           </div>

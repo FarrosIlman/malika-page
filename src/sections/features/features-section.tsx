@@ -25,13 +25,13 @@ function FeatureRow({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.5, delay: index * 0.07, ease: EASE }}
-      className="group flex flex-col sm:flex-row items-start gap-6 py-8 border-b border-white/5 last:border-0 rounded-xl px-4
+      className="group flex flex-col sm:flex-row items-start gap-6 py-8 border-b dark:border-white/5 border-black/5 last:border-0 rounded-xl px-4
                  transition-all duration-200 ease-out hover:bg-white/[0.02]"
     >
       {/* Icon container */}
       <div
         className="relative flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center
-                   transition-colors duration-200 bg-[#0a0a14] z-10"
+                   transition-colors duration-200 dark:bg-[#0a0a14] bg-surface z-10"
         style={{
           border: "1px solid rgba(139,128,248,0.2)",
         }}

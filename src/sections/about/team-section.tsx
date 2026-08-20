@@ -28,7 +28,7 @@ const teamMembers = [
 
 export function TeamSection() {
   return (
-    <section className="py-16 relative overflow-hidden bg-white/[0.02] border-y border-white/5">
+    <section className="py-16 relative overflow-hidden bg-white/[0.02] border-y dark:border-white/5 border-black/5">
       <Container>
         <div className="text-center max-w-2xl mx-auto space-y-4 mb-12 relative z-10">
           <span className="badge-terminal border-blue-500/30 text-blue-400 bg-blue-500/10 text-xs">
@@ -65,7 +65,7 @@ export function TeamSection() {
                 }}
               />
               
-              <div className="w-20 h-20 mx-auto rounded-full overflow-hidden mb-5 bg-white/5 border border-emerald-500/20 relative shadow-[0_0_20px_rgba(52,211,153,0.1)] group-hover:border-emerald-400/50 transition-colors duration-300">
+              <div className="w-20 h-20 mx-auto rounded-full overflow-hidden mb-5 dark:bg-white/5 bg-black/5 border border-emerald-500/20 relative shadow-[0_0_20px_rgba(52,211,153,0.1)] group-hover:border-emerald-400/50 transition-colors duration-300">
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#1a1a1f] to-[#0a0a0c]">
                   {(() => {
                     const Icon = member.avatar;
@@ -80,13 +80,13 @@ export function TeamSection() {
                 <p className="text-muted text-xs leading-relaxed mb-5 h-[70px]">{member.desc}</p>
                 
                 <div className="flex items-center justify-center gap-3">
-                  <Link href="#" className="w-7 h-7 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-white hover:bg-white/10 transition-colors">
+                  <Link href="#" className="w-7 h-7 rounded-full dark:bg-white/5 bg-black/5 border dark:border-white/10 border-black/10 flex items-center justify-center text-muted hover:text-foreground hover:dark:bg-white/10 bg-black/10 transition-colors">
                     <Code2 className="w-3.5 h-3.5" />
                   </Link>
-                  <Link href="#" className="w-7 h-7 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-white hover:bg-white/10 transition-colors">
+                  <Link href="#" className="w-7 h-7 rounded-full dark:bg-white/5 bg-black/5 border dark:border-white/10 border-black/10 flex items-center justify-center text-muted hover:text-foreground hover:dark:bg-white/10 bg-black/10 transition-colors">
                     <Globe className="w-3.5 h-3.5" />
                   </Link>
-                  <Link href="#" className="w-7 h-7 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-white hover:bg-white/10 transition-colors">
+                  <Link href="#" className="w-7 h-7 rounded-full dark:bg-white/5 bg-black/5 border dark:border-white/10 border-black/10 flex items-center justify-center text-muted hover:text-foreground hover:dark:bg-white/10 bg-black/10 transition-colors">
                     <Mail className="w-3.5 h-3.5" />
                   </Link>
                 </div>

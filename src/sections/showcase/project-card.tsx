@@ -40,7 +40,7 @@ function ProjectImageFrame({
         </div>
       </div>
 
-      <div className="relative w-full h-full pt-[36px] bg-[#0f0f1c]">
+      <div className="relative w-full h-full pt-[36px] dark:bg-[#0f0f1c] bg-surface">
         {image && (image.startsWith("/") || image.startsWith("http")) ? (
           <Image
             src={image}
@@ -65,7 +65,7 @@ function ProjectImageFrame({
                        opacity-0 group-hover:opacity-100
                        scale-90 group-hover:scale-100
                        transition-all duration-300
-                       hover:bg-primary hover:text-primary-foreground border border-white/10"
+                       hover:bg-primary hover:text-primary-foreground border dark:border-white/10 border-black/10"
           >
             <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
           </span>

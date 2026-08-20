@@ -35,13 +35,13 @@ export function TimelineSection() {
             </p>
             
             {/* Tab Switcher */}
-            <div className="flex bg-[#0f0f1c] p-1 rounded-lg border border-border mt-8 max-w-fit">
+            <div className="flex dark:bg-[#0f0f1c] bg-surface p-1 rounded-lg border border-border mt-8 max-w-fit">
               <button
                 onClick={() => setActiveTab("project")}
                 className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${
                   activeTab === "project" 
                     ? "bg-[#8b80f8]/20 text-primary border border-primary/30 shadow-sm" 
-                    : "text-muted hover:text-foreground hover:bg-white/5 border border-transparent"
+                    : "text-muted hover:text-foreground hover:dark:bg-white/5 bg-black/5 border border-transparent"
                 }`}
               >
                 Project Development
@@ -51,7 +51,7 @@ export function TimelineSection() {
                 className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${
                   activeTab === "academic" 
                     ? "bg-[#8b80f8]/20 text-primary border border-primary/30 shadow-sm" 
-                    : "text-muted hover:text-foreground hover:bg-white/5 border border-transparent"
+                    : "text-muted hover:text-foreground hover:dark:bg-white/5 bg-black/5 border border-transparent"
                 }`}
               >
                 Academic Assistance
@@ -86,7 +86,7 @@ export function TimelineSection() {
                         {/* Step number circle */}
                         <div
                           className="w-7 h-7 rounded-full flex items-center justify-center
-                                     text-[10px] font-medium font-mono tabular-nums flex-shrink-0 z-10 bg-[#08080f]"
+                                     text-[10px] font-medium font-mono tabular-nums flex-shrink-0 z-10 dark:bg-[#08080f] bg-background"
                           style={{
                             border: "1px solid rgba(139,128,248,0.4)",
                             color: "rgba(139,128,248,0.9)",

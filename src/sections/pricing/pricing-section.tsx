@@ -80,7 +80,7 @@ export function PricingSection() {
                 </ul>
 
                 {plan.id === "joki-tugas" && (
-                  <div className="relative z-10 mt-auto pt-4 border-t border-white/5">
+                  <div className="relative z-10 mt-auto pt-4 border-t dark:border-white/5 border-black/5">
                     <Link 
                       href="/academic" 
                       className="inline-flex items-center justify-center w-full py-2.5 px-4 text-sm font-medium text-white bg-primary/20 hover:bg-primary/30 border border-primary/30 rounded-xl transition-colors"
@@ -115,13 +115,13 @@ export function PricingSection() {
             </p>
           </div>
           <div className="flex flex-wrap justify-center md:justify-end gap-4">
-            <div className="flex items-center gap-2 text-xs font-medium text-foreground/80 bg-background/50 px-3 py-1.5 rounded-full border border-white/5">
+            <div className="flex items-center gap-2 text-xs font-medium text-foreground/80 bg-background/50 px-3 py-1.5 rounded-full border dark:border-white/5 border-black/5">
               <ShieldCheck className="w-4 h-4 text-primary" /> Kualitas Terbaik
             </div>
-            <div className="flex items-center gap-2 text-xs font-medium text-foreground/80 bg-background/50 px-3 py-1.5 rounded-full border border-white/5">
+            <div className="flex items-center gap-2 text-xs font-medium text-foreground/80 bg-background/50 px-3 py-1.5 rounded-full border dark:border-white/5 border-black/5">
               <Clock className="w-4 h-4 text-primary" /> Tepat Waktu
             </div>
-            <div className="flex items-center gap-2 text-xs font-medium text-foreground/80 bg-background/50 px-3 py-1.5 rounded-full border border-white/5">
+            <div className="flex items-center gap-2 text-xs font-medium text-foreground/80 bg-background/50 px-3 py-1.5 rounded-full border dark:border-white/5 border-black/5">
               <Award className="w-4 h-4 text-primary" /> Harga Kompetitif
             </div>
           </div>
