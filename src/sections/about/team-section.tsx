@@ -61,7 +61,7 @@ export function TeamSection() {
               />
               
               <div className="w-20 h-20 mx-auto rounded-full overflow-hidden mb-5 dark:bg-white/5 bg-black/5 border border-emerald-500/20 relative shadow-[0_0_20px_rgba(52,211,153,0.1)] group-hover:border-emerald-400/50 transition-colors duration-300">
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#1a1a1f] to-[#0a0a0c]">
+                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-black/5 to-black/10 dark:from-[#1a1a1f] dark:to-[#0a0a0c]">
                   {(() => {
                     const Icon = member.avatar;
                     return <Icon className="w-8 h-8 text-emerald-400/80 group-hover:scale-110 transition-transform duration-300 group-hover:rotate-6" strokeWidth={1.5} />;

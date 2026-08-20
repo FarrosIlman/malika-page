@@ -87,7 +87,7 @@ export function AboutHeroSection() {
           >
             <div className="aspect-[4/3] md:aspect-square max-w-sm mx-auto rounded-3xl overflow-hidden border dark:border-white/10 border-black/10 relative group">
               <div className="absolute inset-0 bg-emerald-500/5 group-hover:bg-transparent transition-colors duration-500 z-10" />
-              <div className="w-full h-full bg-gradient-to-br from-[#0a0a0c] via-[#141416] to-[#0a0a0c] flex items-center justify-center p-6">
+              <div className="w-full h-full bg-gradient-to-br from-background via-surface to-background dark:from-[#0a0a0c] dark:via-[#141416] dark:to-[#0a0a0c] flex items-center justify-center p-6">
                 <div className="text-center space-y-3 relative z-20">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl dark:bg-white/5 bg-black/5 border dark:border-white/10 border-black/10 backdrop-blur-md mb-2 shadow-[0_0_20px_rgba(52,211,153,0.1)]">
                      <span className="text-2xl font-bold text-emerald-400">&gt;_</span>
