@@ -148,12 +148,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-background text-foreground antialiased overflow-x-clip">
+      <body className="min-h-screen bg-background text-foreground antialiased overflow-x-clip transition-colors duration-500">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
-          disableTransitionOnChange
         >
           {children}
           <Analytics />
